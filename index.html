@@ -1,0 +1,1067 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Sandhit Foundation: 365 Rehabilitations in 365 Days. Focusing on addiction recovery and livelihood generation in West Bengal.">
+    <title>Sandhit Foundation | Restoring Dignity</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,700;1,400&display=swap" rel="stylesheet">
+    
+    <style>
+        /* --- CORE VARIABLES --- */
+        :root {
+            --primary: #1a3c40;       /* Deep Teal - Authority */
+            --secondary: #417d7a;     /* Muted Teal - Healing */
+            --accent: #d35400;        /* Burnt Orange - Urgency/Action */
+            --bg-light: #f9f7f2;      /* Warm Paper - Human */
+            --text-dark: #1e2022;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--text-dark);
+            background-color: var(--bg-light);
+            line-height: 1.8;
+            overflow-x: hidden;
+            padding-top: 100px; /* Offset for fixed navbar */
+        }
+
+        h1, h2, h3, h4, h5 {
+            font-family: 'Playfair Display', serif;
+            color: var(--primary);
+            font-weight: 700;
+        }
+
+        /* --- UTILITIES --- */
+        .section-padding { padding: 100px 0; }
+        .text-accent { color: var(--accent); }
+        .bg-white-soft { background-color: #ffffff; }
+        .fw-medium { font-weight: 500; }
+        .letter-spacing { letter-spacing: 1px; }
+        
+        /* --- BUTTONS --- */
+        .btn-custom {
+            background-color: var(--primary);
+            color: white;
+            padding: 14px 35px;
+            border-radius: 0;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            font-size: 0.8rem;
+            transition: all 0.3s ease;
+            border: 1px solid var(--primary);
+            font-weight: 600;
+        }
+        .btn-custom:hover {
+            background-color: transparent;
+            color: var(--primary);
+        }
+
+        /* --- FORMS --- */
+        .form-control {
+            border-radius: 0;
+            padding: 12px;
+            border: 1px solid #ddd;
+            background-color: #fcfcfc;
+        }
+        .form-control:focus {
+            box-shadow: none;
+            border-color: var(--primary);
+        }
+
+        /* --- HERO SECTION --- */
+        .hero {
+            background: linear-gradient(rgba(26, 60, 64, 0.9), rgba(26, 60, 64, 0.8)), url('https://images.unsplash.com/photo-1531206715517-5c0ba140b2b8?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+            height: 85vh;
+            display: flex;
+            align-items: center;
+            color: white;
+        }
+
+        .hero h1 { color: white; font-size: 3.5rem; margin-bottom: 20px; }
+        .hero-tag { 
+            background: var(--accent); 
+            color: white; 
+            padding: 5px 15px; 
+            font-size: 0.8rem; 
+            text-transform: uppercase; 
+            letter-spacing: 2px;
+            display: inline-block;
+            margin-bottom: 20px;
+        }
+
+        /* --- PROGRAM CARDS --- */
+        .program-card {
+            background: white;
+            padding: 40px;
+            border-top: 5px solid var(--secondary);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            transition: transform 0.3s;
+            height: 100%;
+            position: relative;
+            overflow: hidden;
+        }
+        .program-card:hover { 
+            transform: translateY(-5px); 
+            border-top-color: var(--accent); 
+        }
+        .program-icon {
+            width: 70px;
+            height: 70px;
+            background: var(--bg-light);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            color: var(--primary);
+            margin-bottom: 25px;
+        }
+        
+        /* --- LEADERSHIP PROFILES --- */
+        .leader-profile {
+            background: white;
+            padding: 40px;
+            margin-bottom: 40px;
+            border: 1px solid rgba(0,0,0,0.05);
+            box-shadow: 0 5px 20px rgba(0,0,0,0.03);
+        }
+        
+        .leader-img-wrapper {
+            position: relative;
+            overflow: hidden;
+            background-color: #f0f0f0;
+        }
+        
+        .leader-img {
+            width: 100%;
+            height: 350px;
+            object-fit: cover;
+            object-position: top;
+            transition: 0.4s;
+        }
+        .leader-profile:hover .leader-img { transform: scale(1.02); }
+
+        /* --- PARTNER MAP CARDS --- */
+        .partner-card {
+            background: white;
+            border: 1px solid #eee;
+            overflow: hidden;
+            height: 100%;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+        .map-container {
+            height: 250px;
+            width: 100%;
+            background: #eee;
+        }
+        .partner-body {
+            padding: 25px;
+            border-top: 4px solid var(--accent);
+        }
+
+        /* --- CAREERS CARDS --- */
+        .job-card {
+            background: white;
+            border: 1px solid #eee;
+            border-top: 4px solid var(--primary);
+            padding: 30px;
+            height: 100%;
+            transition: 0.3s;
+        }
+        .job-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            border-top-color: var(--accent);
+        }
+        .job-salary {
+            background-color: #eef2f3;
+            color: var(--primary);
+            display: inline-block;
+            padding: 5px 10px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+
+        /* --- STRATEGIC PARTNERS --- */
+        .brand-box {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.03);
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid rgba(0,0,0,0.05);
+            transition: 0.3s;
+        }
+        .brand-box:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            border-color: var(--accent);
+        }
+
+        /* --- FOUNDER MESSAGE --- */
+        .founder-message-section {
+            background-color: var(--primary);
+            color: rgba(255,255,255,0.9);
+            position: relative;
+            overflow: hidden;
+        }
+        .message-quote-icon {
+            font-size: 8rem;
+            position: absolute;
+            top: 20px;
+            right: 40px;
+            opacity: 0.1;
+            font-family: serif;
+        }
+
+        /* --- GALLERY --- */
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            margin-bottom: 24px;
+            border-bottom: 3px solid var(--accent);
+        }
+        .gallery-img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        .gallery-item:hover .gallery-img {
+            transform: scale(1.05);
+        }
+
+        /* --- DONATION SECTION --- */
+        .donate-card {
+            background: white;
+            padding: 40px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+            border-top: 5px solid var(--accent);
+        }
+        .qr-box {
+            border: 2px dashed #ddd;
+            padding: 20px;
+            display: inline-block;
+            margin-bottom: 20px;
+            background: #fff;
+        }
+        .bank-details {
+            background: #f8f9fa;
+            padding: 20px;
+            font-family: 'Inter', monospace;
+            font-size: 0.9rem;
+            border-left: 3px solid var(--primary);
+        }
+
+        /* --- FOOTER --- */
+        footer { background: var(--text-dark); color: #888; padding: 60px 0; }
+        footer h5 { color: white; margin-bottom: 20px; }
+        footer a { color: #888; text-decoration: none; transition: 0.3s; }
+        footer a:hover { color: var(--accent); }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg bg-white fixed-top shadow-sm py-2">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="#">
+                <img src="images/logo.png" alt="Sandhit Foundation Logo" style="height: 85px; width: auto;" class="me-3">
+                <span class="d-none d-sm-block fs-3" style="font-family: 'Playfair Display', serif; font-weight: 700; color: var(--primary);">Sandhit Foundation</span>
+            </a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-center">
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#vision">Mission</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#programs">Programs</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#leadership">Leadership</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#network">Network</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#mapping">Locations</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#outreach">Outreach</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#retail">Retail</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#gallery">Gallery</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#careers">Careers</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                    <li class="nav-item ms-lg-3"><a class="btn btn-custom py-2" href="#donate">Donate Now</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8">
+                    <span class="hero-tag">Est. 2023</span>
+                    <h1>The Secret to Change is Building the New.</h1>
+                    <p class="lead mb-4 opacity-75">Destigmatizing addiction and tackling educated unemployment. We operate in West Bengal, Sikkim, and Maharashtra with a single focus: restoring human potential.</p>
+                    <a href="#programs" class="btn btn-custom border-white text-white">Explore Our Programs</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section id="about" class="section-padding">
+        <div class="container">
+            <div class="row align-items-center mb-5">
+                <div class="col-lg-6">
+                    <h5 class="text-accent letter-spacing">Who We Are</h5>
+                    <h2 class="mb-4">A Two-Pronged Approach to Crisis</h2>
+                    <p>Sandhit Foundation is a grassroots organization of young professionals. We mobilize volunteers to address two highly vulnerable groups often shunned by society:</p>
+                    <ul class="list-unstyled mt-4">
+                        <li class="mb-3 d-flex"><i class="fas fa-check-circle text-accent mt-1 me-3"></i> <div><strong>Rehabilitation:</strong> Identification and treatment of street addicts.</div></li>
+                        <li class="mb-3 d-flex"><i class="fas fa-briefcase text-accent mt-1 me-3"></i> <div><strong>Livelihood:</strong> Tackling educated unemployment and skill generation.</div></li>
+                    </ul>
+                </div>
+                <div class="col-lg-6 ps-lg-5">
+                    <div class="p-4 bg-white shadow-sm border-start border-4 border-dark">
+                        <h4>The Reality in Numbers</h4>
+                        <p class="small text-muted mb-4">Source: National Survey on Extent and Pattern of Substance Use in India</p>
+                        
+                        <div class="d-flex justify-content-between mb-3 border-bottom pb-2">
+                            <span>Alcohol Users</span>
+                            <span class="fw-bold">~16 Crore</span>
+                        </div>
+                        <div class="d-flex justify-content-between mb-3 border-bottom pb-2">
+                            <span>Cannabis Users</span>
+                            <span class="fw-bold">~3.1 Crore</span>
+                        </div>
+                        <div class="d-flex justify-content-between">
+                            <span>Opioid Users</span>
+                            <span class="fw-bold text-accent">~60 Lakh</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="message" class="founder-message-section section-padding">
+        <div class="container">
+            <i class="fas fa-quote-right message-quote-icon"></i>
+            <div class="row justify-content-center">
+                <div class="col-lg-8 text-center mb-5">
+                    <h2 class="text-white">Founder's Message</h2>
+                    <hr class="mx-auto" style="width: 60px; border-color: var(--accent); opacity: 1; border-width: 3px;">
+                </div>
+                <div class="col-lg-10">
+                    <div class="lead" style="font-weight: 300;">
+                        <p>At Sandhit Foundation, our belief is simple yet profound: <strong>addiction is a health condition, not a moral failure.</strong> Every individual struggling with substance use deserves understanding, timely care, and an opportunity to rebuild their life with dignity.</p>
+                        
+                        <p>My journey towards founding Sandhit Foundation is rooted in both professional experience and personal reality. Having spent over three decades in the healthcare sector, I witnessed the importance of structured systems. However, it was my experience as a mother of a son who battled substance addiction that truly transformed my perspective. Through years of treatment, setbacks, perseverance, and hope, I saw recovery become a reality.</p>
+
+                        <p>Sandhit Foundation was established to bridge the gap for the economically underprivileged. Our mission is to destigmatise substance use disorders, promote awareness, and provide free rehabilitation and recovery support to those who cannot afford it.</p>
+                        
+                        <p>I invite you to join us in this mission—whether as a partner, donor, volunteer, or advocate. Together, we can create a society where compassion replaces judgement.</p>
+                    </div>
+                    <div class="mt-5 text-end">
+                        <h4 class="mb-0 text-white font-italic">Minakshi Chatterjee</h4>
+                        <p class="text-accent text-uppercase small letter-spacing">Founder & Director</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="vision" class="section-padding bg-white-soft">
+        <div class="container">
+            <div class="row text-center mb-5">
+                <div class="col-lg-8 mx-auto">
+                    <h2 class="display-4">Mission & Vision: 365 in 365</h2>
+                    <p class="lead text-muted">In our first year, we seek to provide free treatment to 365 street addicts in West Bengal.</p>
+                </div>
+            </div>
+            
+            <div class="row g-4 text-center">
+                <div class="col-md-4">
+                    <div class="p-4">
+                        <i class="fas fa-bullseye fa-3x text-accent mb-3"></i>
+                        <h4>Target Group</h4>
+                        <p>Heroin addicts aged 20-25. Mostly males, long-term users (5+ years), unemployed, and alienated from families.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="p-4 border-start border-end">
+                        <i class="fas fa-hand-holding-heart fa-3x text-accent mb-3"></i>
+                        <h4>The Barrier</h4>
+                        <p>Addiction is often dismissed as a "choice." We treat it as a chronic disorder requiring medical intervention, not judgment.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="p-4">
+                        <i class="fas fa-map-marked-alt fa-3x text-accent mb-3"></i>
+                        <h4>Geography</h4>
+                        <p>Operations focused on Urban & Rural youth across West Bengal (Kolkata), Sikkim, and Maharashtra.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="programs" class="section-padding">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h5 class="text-accent">What We Do</h5>
+                <h2>Our Programs</h2>
+                <p class="text-muted">Driven by a commitment to restoring dignity, health, and opportunity.</p>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-md-6">
+                    <div class="program-card">
+                        <div class="program-icon"><i class="fas fa-bullhorn"></i></div>
+                        <h4>Awareness & Education</h4>
+                        <p class="text-muted small">Our primary objective is to spread awareness that addiction is a disease (WHO), not a moral failure. We focus on community campaigns, counseling, and family education to reduce stigma and promote hope.</p>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="program-card">
+                        <div class="program-icon"><i class="fas fa-hand-holding-medical"></i></div>
+                        <h4>Free Rehabilitation & Detox</h4>
+                        <p class="text-muted small">We bridge the cost gap by providing completely free treatment for underprivileged users. This includes access to detox facilities, counseling, and nationwide support outreach.</p>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="program-card">
+                        <div class="program-icon"><i class="fas fa-briefcase"></i></div>
+                        <h4>Livelihood & Reintegration</h4>
+                        <p class="text-muted small">True healing includes restoring independence. We support individuals through skill development, vocational training, and employment facilitation to achieve sustainable self-reliance.</p>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="program-card">
+                        <div class="program-icon"><i class="fas fa-transgender"></i></div>
+                        <h4>Transgender Empowerment</h4>
+                        <p class="text-muted small">We actively work with the transgender community to provide addiction recovery support, skill training, and social inclusion programs, creating a safe environment for all.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="leadership" class="section-padding bg-white-soft">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h5 class="text-accent">Our Pillars</h5>
+                <h2>Leadership & Advisors</h2>
+            </div>
+
+            <div class="leader-profile">
+                <div class="row align-items-center">
+                    <div class="col-lg-4">
+                        <div class="leader-img-wrapper">
+                            <img src="images/founder.jpeg" alt="Minakshi Chatterjee" class="leader-img">
+                        </div>
+                    </div>
+                    <div class="col-lg-8">
+                        <h3 class="mb-1">Minakshi Chatterjee</h3>
+                        <p class="text-accent fw-bold text-uppercase mb-3">Founder & Director</p>
+                        <p>Minakshi Chatterjee brings with her over <strong>30 years of rich professional experience</strong> in the medical and healthcare sector. She has worked with reputed healthcare institutions, most notably the <strong>Manipal Group of Hospitals</strong>, where she played a key role in strengthening administrative operations.</p>
+                        <p>Throughout her career, Minakshi has been known for her strong work ethic, deep understanding of healthcare administration, and people-centric approach. Her leadership reflects a rare blend of professional expertise and lived experience.</p>
+                        <div class="bg-light p-3 border-start border-4 border-warning mt-3">
+                            <small class="text-muted fst-italic">"As a mother, she faced the challenging reality of supporting a child through substance use disorder. This personal journey reinforced her conviction that recovery is possible."</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="leader-profile">
+                <div class="row align-items-center">
+                    <div class="col-lg-4 order-lg-2">
+                        <div class="leader-img-wrapper">
+                            <img src="images/saptarshi.jpeg" alt="Saptarshi Chatterjee" class="leader-img">
+                        </div>
+                    </div>
+                    <div class="col-lg-8 order-lg-1">
+                        <h3 class="mb-1">Saptarshi Chatterjee</h3>
+                        <p class="text-accent fw-bold text-uppercase mb-3">Strategic Fundraising Consultant</p>
+                        
+                        <p>Saptarshi Chatterjee is a Strategic Fundraising Consultant with <strong>17+ years of experience</strong> in Individual Giving Fundraising. He currently supports Sandhit Foundation in strengthening fundraising strategy, operational efficiency, and geographic expansion.</p>
+                        
+                        <div class="row mt-4 mb-3">
+                            <div class="col-md-6">
+                                <ul class="list-unstyled">
+                                    <li class="mb-2"><i class="fas fa-angle-right text-accent me-2"></i> Ex-Greenpeace India</li>
+                                    <li class="mb-2"><i class="fas fa-angle-right text-accent me-2"></i> Ex-UNICEF (City Coordinator)</li>
+                                    <li class="mb-2"><i class="fas fa-angle-right text-accent me-2"></i> Ex-Amnesty International (City Head)</li>
+                                </ul>
+                            </div>
+                            <div class="col-md-6">
+                                <ul class="list-unstyled">
+                                    <li class="mb-2"><i class="fas fa-check text-success me-2"></i> Ex-SD Solution Founder & Director</li>
+                                    <li class="mb-2"><i class="fas fa-check text-success me-2"></i> 17+ Years in Fundraising</li>
+                                    <li class="mb-2"><i class="fas fa-check text-success me-2"></i> 17+ Years in Recovery</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <p><strong>Lived Experience:</strong> Saptarshi brings valuable insight as a person in long-term recovery, having been clean and sober for over 17 years. This perspective strengthens his strategic approach and ethical leadership.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="leader-profile">
+                <div class="row align-items-center">
+                    <div class="col-lg-4">
+                        <div class="leader-img-wrapper">
+                            <img src="images/siddhartha.jpeg" alt="Siddhartha Dutta" class="leader-img">
+                        </div>
+                    </div>
+                    <div class="col-lg-8">
+                        <h3 class="mb-1">Siddhartha Dutta</h3>
+                        <p class="text-accent fw-bold text-uppercase mb-3">Mentor & Advisor</p>
+                        
+                        <p>Siddhartha is a fundraising professional with over <strong>25 years of experience</strong> working across more than 10 countries. He has helped multiple INGOs and institutions build fundraising departments from the ground up, scale them sustainably, and drive long-term excellence.</p>
+                        
+                        <div class="row mt-4 mb-3">
+                            <div class="col-12">
+                                <ul class="list-unstyled">
+                                    <li class="mb-2"><i class="fas fa-globe text-accent me-2"></i> Global Experience: USA, Europe, Asia (Thailand, South Korea, China, etc.)</li>
+                                    <li class="mb-2"><i class="fas fa-briefcase text-accent me-2"></i> Verticals: F2F, Corporate, HNI, Institutional Grants</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <p>He began his career in India as a street fundraiser and progressed into senior leadership. Beyond fundraising, Siddhartha has a strong interest in organisational development, governance, and financial management. He is deeply invested in mentoring future leaders, building institutional capacity, and translating strategy into execution.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="partners" class="section-padding bg-white-soft">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h5 class="text-accent">Collaborations</h5>
+                <h2>Strategic Partners</h2>
+            </div>
+            <div class="row justify-content-center mb-5">
+                <div class="col-md-4 mb-4">
+                    <div class="brand-box">
+                        <img src="images/letzrise.png" alt="Letzrise" class="img-fluid mb-4" style="max-height: 80px;">
+                        <h4>Letzrise</h4>
+                        <p class="text-muted small mb-0 text-center">Recruitment & Training Partner</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4" data-bs-toggle="modal" data-bs-target="#sdSolutionModal" style="cursor: pointer;">
+                    <div class="brand-box">
+                        <div class="mb-4 text-secondary">
+                            <i class="fas fa-handshake fa-3x"></i>
+                        </div>
+                        <h4>SD Solutions</h4>
+                        <p class="text-muted small mb-0 text-center">Fundraising Partner (Click to View)</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4" data-bs-toggle="modal" data-bs-target="#susthataModal" style="cursor: pointer;">
+                    <div class="brand-box">
+                        <div class="mb-4 text-secondary">
+                            <i class="fas fa-user-md fa-3x"></i>
+                        </div>
+                        <h4>Susthata LLP</h4>
+                        <p class="text-muted small mb-0 text-center">Clinical & Therapeutic Partner (Click to View)</p>
+                    </div>
+                </div>
+            </div>
+
+            <hr class="my-5">
+            <div class="text-center mb-5">
+                <h4 class="text-primary">Partner Leadership</h4>
+            </div>
+            
+            <div class="leader-profile">
+                <div class="row align-items-center">
+                    <div class="col-lg-4">
+                        <div class="leader-img-wrapper">
+                            <img src="images/debkumar.jpg" alt="Deb Kumar Chattopadhyay" class="leader-img">
+                        </div>
+                    </div>
+                    <div class="col-lg-8">
+                        <h3 class="mb-1">Deb Kumar Chattopadhyay</h3>
+                        <p class="text-accent fw-bold mb-3">Co-founder & Partner, Letzrise Consulting Services LLP</p>
+                        <p class="text-muted small text-uppercase mb-3">Advisory Member, Animal Care India</p>
+                        
+                        <p>Deb Kumar possesses over two decades of experience holding leadership and consultant roles at major organizations including Greenpeace, Charities Aid Foundation, Railway Children, and Rural Development Trust. He operates on the premise that passion alone is insufficient for social change, prioritizing the correction of weak systems and missing strategies.</p>
+                        
+                        <div class="row mt-4">
+                            <div class="col-md-6">
+                                <ul class="list-unstyled small">
+                                    <li class="mb-2"><i class="fas fa-check text-accent me-2"></i> Strategic Fundraising & System Design</li>
+                                    <li class="mb-2"><i class="fas fa-check text-accent me-2"></i> Organizational Leadership</li>
+                                </ul>
+                            </div>
+                            <div class="col-md-6">
+                                <ul class="list-unstyled small">
+                                    <li class="mb-2"><i class="fas fa-check text-accent me-2"></i> Digital-First Engagement</li>
+                                    <li class="mb-2"><i class="fas fa-map-marker-alt text-accent me-2"></i> Based in Bengaluru, Karnataka</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="network" class="section-padding">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h5 class="text-accent">Our Network</h5>
+                <h2>Rehabilitation Partners</h2>
+                <p class="text-muted">We have tied up with established centers to ensure safe, medical recovery.</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-4">
+                    <div class="partner-card">
+                        <div class="map-container">
+                            <iframe width="100%" height="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?q=Snehnir,Howrah&t=&z=13&ie=UTF8&iwloc=&output=embed"></iframe>
+                        </div>
+                        <div class="partner-body">
+                            <h4>Snehnir</h4>
+                            <p class="text-muted mb-0"><i class="fas fa-map-marker-alt text-accent me-2"></i> Howrah, West Bengal</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="partner-card">
+                        <div class="map-container">
+                            <iframe width="100%" height="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?q=Behala,Kolkata&t=&z=13&ie=UTF8&iwloc=&output=embed"></iframe>
+                        </div>
+                        <div class="partner-body">
+                            <h4>Snehlota</h4>
+                            <p class="text-muted mb-0"><i class="fas fa-map-marker-alt text-accent me-2"></i> Behala, Kolkata</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="partner-card">
+                        <div class="map-container">
+                            <iframe width="100%" height="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?q=Salugarah,Siliguri&t=&z=13&ie=UTF8&iwloc=&output=embed"></iframe>
+                        </div>
+                        <div class="partner-body">
+                            <h4>Our Seva Home</h4>
+                            <p class="small text-muted mb-1">Best Rehabilitation Center in Siliguri</p>
+                            <p class="text-muted mb-0"><i class="fas fa-map-marker-alt text-accent me-2"></i> Salugarah, Siliguri</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="mapping" class="section-padding bg-white-soft">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h5 class="text-accent">Geographic Reach</h5>
+                <h2>Project Footprint: Targeted Interventions</h2>
+                <p class="text-muted">Mapping our active presence and focused interventions for vulnerable communities.</p>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="partner-card">
+                        <div class="map-container">
+                            <iframe width="100%" height="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?q=West+Bengal&t=&z=7&ie=UTF8&iwloc=&output=embed"></iframe>
+                        </div>
+                        <div class="partner-body bg-white">
+                            <h4>West Bengal</h4>
+                            <p class="text-accent fw-bold small mb-2"><i class="fas fa-map-marker-alt me-2"></i> Kolkata & Siliguri</p>
+                            <hr>
+                            <p class="small mb-1"><strong>Focus Areas:</strong></p>
+                            <ul class="small text-muted ps-3 mb-0">
+                                <li>Clinical Care for Transgender Community</li>
+                                <li>Rehabilitation for Injecting Drug Users</li>
+                                <li>Livelihood Generation</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="partner-card">
+                        <div class="map-container">
+                            <iframe width="100%" height="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?q=Punjab&t=&z=7&ie=UTF8&iwloc=&output=embed"></iframe>
+                        </div>
+                        <div class="partner-body bg-white">
+                            <h4>Punjab</h4>
+                            <p class="text-accent fw-bold small mb-2"><i class="fas fa-map-marker-alt me-2"></i> Chandigarh & Ludhiana</p>
+                            <hr>
+                            <p class="small mb-1"><strong>Focus Areas:</strong></p>
+                            <ul class="small text-muted ps-3 mb-0">
+                                <li>Harm Reduction for Injecting Drug Users</li>
+                                <li>Opioid Substitution Therapy (Awareness)</li>
+                                <li>Community Mobilization</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="partner-card">
+                        <div class="map-container">
+                            <iframe width="100%" height="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?q=Haryana&t=&z=7&ie=UTF8&iwloc=&output=embed"></iframe>
+                        </div>
+                        <div class="partner-body bg-white">
+                            <h4>Haryana</h4>
+                            <p class="text-accent fw-bold small mb-2"><i class="fas fa-map-marker-alt me-2"></i> Gurugram & Rohtak</p>
+                            <hr>
+                            <p class="small mb-1"><strong>Focus Areas:</strong></p>
+                            <ul class="small text-muted ps-3 mb-0">
+                                <li>Transgender Empowerment & Health</li>
+                                <li>Targeted Intervention for High-Risk Groups</li>
+                                <li>Social Inclusion Programs</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="outreach" class="section-padding">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h5 class="text-accent">Community Engagement</h5>
+                <h2>Outreach and Mall permission</h2>
+                <p class="text-muted">Building connections and spreading awareness in malls and public spaces.</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-4 col-lg-3"><div class="gallery-item"><img src="images/outreach1.jpg" alt="Outreach" class="gallery-img"></div></div>
+                <div class="col-md-4 col-lg-3"><div class="gallery-item"><img src="images/outreach2.jpg" alt="Outreach" class="gallery-img"></div></div>
+                <div class="col-md-4 col-lg-3"><div class="gallery-item"><img src="images/outreach3.jpg" alt="Outreach" class="gallery-img"></div></div>
+                <div class="col-md-4 col-lg-3"><div class="gallery-item"><img src="images/outreach4.jpg" alt="Outreach" class="gallery-img"></div></div>
+                <div class="col-md-4 col-lg-3"><div class="gallery-item"><img src="images/outreach5.jpg" alt="Outreach" class="gallery-img"></div></div>
+                <div class="col-md-4 col-lg-3"><div class="gallery-item"><img src="images/outreach6.jpg" alt="Outreach" class="gallery-img"></div></div>
+                <div class="col-md-4 col-lg-3"><div class="gallery-item"><img src="images/outreach7.jpg" alt="Outreach" class="gallery-img"></div></div>
+                <div class="col-md-4 col-lg-3"><div class="gallery-item"><img src="images/outreach8.jpg" alt="Outreach" class="gallery-img"></div></div>
+                <div class="col-md-4 col-lg-3"><div class="gallery-item"><img src="images/outreach9.jpg" alt="Outreach" class="gallery-img"></div></div>
+                <div class="col-md-4 col-lg-3"><div class="gallery-item"><img src="images/outreach10.jpg" alt="Outreach" class="gallery-img"></div></div>
+                <div class="col-md-4 col-lg-3"><div class="gallery-item"><img src="images/outreach11.jpg" alt="Outreach" class="gallery-img"></div></div>
+                <div class="col-md-4 col-lg-3"><div class="gallery-item"><img src="images/outreach12.jpg" alt="Outreach" class="gallery-img"></div></div>
+                <div class="col-md-4 col-lg-3"><div class="gallery-item"><img src="images/outreach13.jpg" alt="Outreach" class="gallery-img"></div></div>
+                <div class="col-md-4 col-lg-3"><div class="gallery-item"><img src="images/outreach14.jpg" alt="Outreach" class="gallery-img"></div></div>
+                <div class="col-md-4 col-lg-3"><div class="gallery-item"><img src="images/outreach15.jpg" alt="Outreach" class="gallery-img"></div></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="retail" class="section-padding bg-white-soft">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h5 class="text-accent">Partnerships</h5>
+                <h2>Retail Fundraising or individual partnership</h2>
+                <p class="text-muted">Empowering individuals and businesses to support the cause.</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-4 col-lg-3"><div class="gallery-item"><img src="images/retail1.jpg" alt="Retail Fundraising" class="gallery-img"></div></div>
+                <div class="col-md-4 col-lg-3"><div class="gallery-item"><img src="images/retail2.jpg" alt="Retail Fundraising" class="gallery-img"></div></div>
+                <div class="col-md-4 col-lg-3"><div class="gallery-item"><img src="images/retail3.jpg" alt="Retail Fundraising" class="gallery-img"></div></div>
+                <div class="col-md-4 col-lg-3"><div class="gallery-item"><img src="images/retail4.jpg" alt="Retail Fundraising" class="gallery-img"></div></div>
+                <div class="col-md-4 col-lg-3"><div class="gallery-item"><img src="images/retail5.jpg" alt="Retail Fundraising" class="gallery-img"></div></div>
+                <div class="col-md-4 col-lg-3"><div class="gallery-item"><img src="images/retail6.jpg" alt="Retail Fundraising" class="gallery-img"></div></div>
+                <div class="col-md-4 col-lg-3"><div class="gallery-item"><img src="images/retail7.jpg" alt="Retail Fundraising" class="gallery-img"></div></div>
+                <div class="col-md-4 col-lg-3"><div class="gallery-item"><img src="images/retail8.jpg" alt="Retail Fundraising" class="gallery-img"></div></div>
+                <div class="col-md-4 col-lg-3"><div class="gallery-item"><img src="images/retail9.jpg" alt="Retail Fundraising" class="gallery-img"></div></div>
+                <div class="col-md-4 col-lg-3"><div class="gallery-item"><img src="images/retail10.jpg" alt="Retail Fundraising" class="gallery-img"></div></div>
+                <div class="col-md-4 col-lg-3"><div class="gallery-item"><img src="images/retail11.jpg" alt="Retail Fundraising" class="gallery-img"></div></div>
+                <div class="col-md-4 col-lg-3"><div class="gallery-item"><img src="images/retail12.jpg" alt="Retail Fundraising" class="gallery-img"></div></div>
+                <div class="col-md-4 col-lg-3"><div class="gallery-item"><img src="images/retail13.jpg" alt="Retail Fundraising" class="gallery-img"></div></div>
+                <div class="col-md-4 col-lg-3"><div class="gallery-item"><img src="images/retail14.jpg" alt="Retail Fundraising" class="gallery-img"></div></div>
+                <div class="col-md-4 col-lg-3"><div class="gallery-item"><img src="images/retail15.jpg" alt="Retail Fundraising" class="gallery-img"></div></div>
+                <div class="col-md-4 col-lg-3"><div class="gallery-item"><img src="images/retail16.jpg" alt="Retail Fundraising" class="gallery-img"></div></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="gallery" class="section-padding">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h5 class="text-accent">On The Ground</h5>
+                <h2>Events & Media</h2>
+            </div>
+
+            <div class="row justify-content-center mb-5">
+                <div class="col-lg-10">
+                    <div class="ratio ratio-16x9 shadow-sm rounded overflow-hidden border">
+                        <video controls>
+                            <source src="images/gallery_video.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-md-4"><div class="gallery-item"><img src="images/event1.jpg" alt="Event Photo" class="gallery-img"></div></div>
+                <div class="col-md-4"><div class="gallery-item"><img src="images/event2.jpg" alt="Event Photo" class="gallery-img"></div></div>
+                <div class="col-md-4"><div class="gallery-item"><img src="images/event3.jpg" alt="Event Photo" class="gallery-img"></div></div>
+                <div class="col-md-4"><div class="gallery-item"><img src="images/event4.jpg" alt="Event Photo" class="gallery-img"></div></div>
+                <div class="col-md-4"><div class="gallery-item"><img src="images/event5.jpg" alt="Event Photo" class="gallery-img"></div></div>
+                <div class="col-md-4"><div class="gallery-item"><img src="images/event6.jpg" alt="Event Photo" class="gallery-img"></div></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="careers" class="section-padding bg-white-soft">
+        <div class="container">
+            <div class="row mb-5">
+                <div class="col-lg-8">
+                    <h5 class="text-accent">Join Our Team</h5>
+                    <h2>Build a Career with Impact</h2>
+                    <p class="text-muted">We are expanding our operations across India. If you are passionate about social change and fundraising, we want to hear from you.</p>
+                </div>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-3">
+                    <div class="job-card">
+                        <div class="job-salary">₹25,000 / Fixed</div>
+                        <h4 class="h5 mb-3">Fundraising Executive</h4>
+                        <p class="small text-muted mb-2"><i class="fas fa-map-marker-alt me-2"></i> Bangalore, Mumbai, Kolkata</p>
+                        <p class="small text-muted mb-4"><i class="fas fa-users me-2"></i> 10 Openings</p>
+                        <a href="mailto:info@sandhitfoundation.org" class="btn btn-sm btn-outline-dark w-100">Apply Now</a>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="job-card">
+                        <div class="job-salary">₹40,000 / Fixed</div>
+                        <h4 class="h5 mb-3">Team Leader</h4>
+                        <p class="small text-muted mb-2"><i class="fas fa-map-marker-alt me-2"></i> Bangalore, Kolkata, Mumbai</p>
+                        <p class="small text-muted mb-4"><i class="fas fa-chart-line me-2"></i> Leadership Role</p>
+                        <a href="mailto:info@sandhitfoundation.org" class="btn btn-sm btn-outline-dark w-100">Apply Now</a>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="job-card">
+                        <div class="job-salary">₹50,000 / Fixed</div>
+                        <h4 class="h5 mb-3">Team Manager</h4>
+                        <p class="small text-muted mb-2"><i class="fas fa-map-marker-alt me-2"></i> Bangalore, Mumbai, Kolkata</p>
+                        <p class="small text-muted mb-4"><i class="fas fa-briefcase me-2"></i> Management Role</p>
+                        <a href="mailto:info@sandhitfoundation.org" class="btn btn-sm btn-outline-dark w-100">Apply Now</a>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="job-card" style="border-top-color: var(--accent);">
+                        <div class="job-salary text-accent" style="background-color: #fff3e0;">₹10 Lakhs / Annum</div>
+                        <h4 class="h5 mb-3">Senior Manager</h4>
+                        <p class="small text-muted mb-2"><i class="fas fa-map-marker-alt me-2"></i> Bangalore Only</p>
+                        <p class="small text-muted mb-4"><i class="fas fa-star me-2"></i> IG Face to Face Fundraising</p>
+                        <a href="mailto:info@sandhitfoundation.org" class="btn btn-sm btn-custom w-100">Apply Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="donate" class="section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-5 mb-5 mb-lg-0">
+                    <h5 class="text-accent">Support The Mission</h5>
+                    <h2 class="mb-4">Help Us Reach 365 Lives</h2>
+                    <p class="mb-4">Your contribution directly funds the medical detoxification and rehabilitation of street-based addicts who have no other safety net. Donations are eligible for 80G tax exemption.</p>
+                    <div class="qr-box text-center">
+                        <img src="images/qrcode.jpg" alt="UPI QR Code" class="img-fluid mb-2" style="max-height: 250px; width: auto;">
+                        <p class="small fw-bold mb-0">Scan to Donate via UPI</p>
+                    </div>
+                    <div class="bank-details mt-3">
+                        <p class="mb-1"><strong>Bank Transfer Details:</strong></p>
+                        <p class="mb-1">Account Name: Sandhit Foundation</p>
+                        <p class="mb-1">Account No: XXXXXXXXXXXXX</p>
+                        <p class="mb-1">IFSC Code: XXXXXXX</p>
+                        <p class="mb-0">Bank: State Bank of India (SBI)</p>
+                    </div>
+                </div>
+                <div class="col-lg-6 offset-lg-1">
+                    <div class="donate-card">
+                        <h4 class="mb-4">Donor Information</h4>
+                        <form>
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <label class="form-label small">Full Name</label>
+                                    <input type="text" class="form-control" placeholder="John Doe">
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label small">Phone Number</label>
+                                    <input type="tel" class="form-control" placeholder="+91">
+                                </div>
+                                <div class="col-12">
+                                    <label class="form-label small">Email Address</label>
+                                    <input type="email" class="form-control" placeholder="name@example.com">
+                                </div>
+                                <div class="col-12">
+                                    <label class="form-label small">PAN Card (For 80G Receipt)</label>
+                                    <input type="text" class="form-control" placeholder="ABCDE1234F">
+                                </div>
+                                <div class="col-12">
+                                    <label class="form-label small">Amount Donated (INR)</label>
+                                    <div class="input-group">
+                                        <span class="input-group-text">₹</span>
+                                        <input type="number" class="form-control" placeholder="1000">
+                                    </div>
+                                </div>
+                                <div class="col-12 mt-4">
+                                    <button type="submit" class="btn btn-custom w-100">Confirm Donation Details</button>
+                                    <p class="text-muted small text-center mt-2">*This helps us send your receipt.</p>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="section-padding bg-white-soft border-top">
+        <div class="container">
+            <div class="row justify-content-center text-center mb-5">
+                <div class="col-lg-8">
+                    <h2>Get in Touch</h2>
+                    <p class="text-muted">Whether you want to volunteer, partner with us, or seek help for a loved one.</p>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <form>
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <input type="text" class="form-control" placeholder="Your Name">
+                            </div>
+                            <div class="col-md-6">
+                                <input type="email" class="form-control" placeholder="Your Email">
+                            </div>
+                            <div class="col-12">
+                                <input type="text" class="form-control" placeholder="Subject">
+                            </div>
+                            <div class="col-12">
+                                <textarea class="form-control" rows="5" placeholder="Message"></textarea>
+                            </div>
+                            <div class="col-12 text-center mt-4">
+                                <button type="submit" class="btn btn-custom px-5">Send Message</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h5 class="mb-3">Sandhit Foundation</h5>
+                    <p class="mb-4">Reconnecting educated youth to resources. Rehabilitating the ostracized. Building the new.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <h5 class="mb-3">Office Locations</h5>
+                    <p class="mb-1">Kolkata • Bangalore • Maharashtra</p>
+                    <p><a href="mailto:info@sandhitfoundation.org">info@sandhitfoundation.org</a></p>
+                    <div class="mt-3">
+                         <a href="#" class="me-3"><i class="fab fa-facebook fa-lg"></i></a>
+                         <a href="#" class="me-3"><i class="fab fa-linkedin fa-lg"></i></a>
+                         <a href="#"><i class="fab fa-instagram fa-lg"></i></a>
+                    </div>
+                </div>
+            </div>
+            <hr class="my-4 border-secondary">
+            <p class="text-center small mb-0">© 2025 Sandhit Foundation. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <div class="modal fade" id="sdSolutionModal" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+          <div class="modal-header bg-light">
+            <h5 class="modal-title fw-bold text-primary">About SD Solutions</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body p-4">
+            <p class="lead">SD Solutions is a service-providing agency specializing in fundraising and resource mobilization for the non-profit sector. Acting as a third-party intermediary, the company bridges the gap between donors and humanitarian organizations.</p>
+            <hr class="my-4">
+            <div class="row">
+                <div class="col-md-6">
+                    <h6 class="text-uppercase text-muted small fw-bold">Core Services</h6>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i> <strong>Face-to-Face (F2F):</strong> Direct engagement in streets, malls, and corporate setups.</li>
+                        <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i> <strong>Telecalling:</strong> Reaching potential donors via phone to solicit funds.</li>
+                    </ul>
+                </div>
+                <div class="col-md-6">
+                    <h6 class="text-uppercase text-muted small fw-bold">Key Partners</h6>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><i class="fas fa-hand-holding-heart text-accent me-2"></i> Smile Foundation</li>
+                        <li class="mb-2"><i class="fas fa-tint text-accent me-2"></i> WaterAid India</li>
+                        <li class="mb-2"><i class="fas fa-ribbon text-accent me-2"></i> HIV Alliance India</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="alert alert-light border mt-3 mb-0">
+                <small><strong>Operational Role:</strong> As a fundraising agency, SD Solutions does not implement social programs itself. Instead, it provides the workforce and strategy required to generate revenue for its NGO partners.</small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="susthataModal" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+          <div class="modal-header bg-light">
+            <h5 class="modal-title fw-bold text-primary">Susthata LLP (Doctors for Safe Zindegi Clinic)</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body p-4">
+            <div class="ratio ratio-16x9 mb-4">
+                <video controls class="rounded">
+                    <source src="images/susthata_video.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            <h5 class="text-accent">Operational Alliance</h5>
+            <p>The Sandhit Foundation has established a functional partnership with Susthata LLP to extend clinical and therapeutic infrastructure to populations systematically excluded from mainstream healthcare. This collaboration addresses the medical needs of high-risk demographics.</p>
+            <div class="row mt-4">
+                <div class="col-md-6">
+                    <h6 class="fw-bold text-primary"><i class="fas fa-transgender-alt me-2"></i>The Transgender Community</h6>
+                    <ul class="small text-muted list-unstyled">
+                        <li class="mb-2"><strong>HRT:</strong> Clinical management of hormonal transition.</li>
+                        <li class="mb-2"><strong>Aesthetic Procedures:</strong> Laser technology for gender-affirming modifications.</li>
+                        <li><strong>General Health:</strong> Routine medical care tailored to trans-specific needs.</li>
+                    </ul>
+                </div>
+                <div class="col-md-6">
+                    <h6 class="fw-bold text-primary"><i class="fas fa-syringe me-2"></i>Injecting Drug Users (IDUs)</h6>
+                    <ul class="small text-muted list-unstyled">
+                        <li class="mb-2"><strong>De-addiction:</strong> Psychological intervention to manage dependency.</li>
+                        <li class="mb-2"><strong>Therapy:</strong> Access to behavioral health therapists.</li>
+                        <li><strong>Sexual Health:</strong> Screening and management of STIs.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="alert alert-light border mt-3">
+                <small><strong>The Sandhit Role:</strong> We mitigate economic disparity through direct subsidization. We facilitate access for street-level drug users and indigent transgender individuals, ensuring financial insolvency does not preclude access to critical medical intervention.</small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

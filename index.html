@@ -309,7 +309,7 @@
         <video autoplay loop muted playsinline style="position: absolute; top: 50%; left: 50%; min-width: 100%; min-height: 100%; width: auto; height: auto; z-index: -2; transform: translate(-50%, -50%); object-fit: cover;">
             <source src="images/front_background.mp4" type="video/mp4">
         </video>
-        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(26, 60, 64, 0.75); z-index: -1;"></div>
+        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(10, 24, 26, 0.85); z-index: -1;"></div>
 
         <div class="container" style="z-index: 1; position: relative;">
             <div class="row">
@@ -533,15 +533,15 @@
                         <p class="text-muted small mb-0 text-center">Recruitment & Training Partner</p>
                     </div>
                 </div>
+                
                 <div class="col-md-4 mb-4" data-bs-toggle="modal" data-bs-target="#sdSolutionModal" style="cursor: pointer;">
                     <div class="brand-box">
-                        <div class="mb-4 text-secondary">
-                            <i class="fas fa-handshake fa-3x"></i>
-                        </div>
+                        <img src="images/sdsolutions.svg" alt="SD Solutions" class="img-fluid mb-4" style="max-height: 80px;">
                         <h4>SD Solutions</h4>
                         <p class="text-muted small mb-0 text-center">Fundraising Partner (Click to View)</p>
                     </div>
                 </div>
+                
                 <div class="col-md-4 mb-4" data-bs-toggle="modal" data-bs-target="#susthataModal" style="cursor: pointer;">
                     <div class="brand-box">
                         <div class="mb-4 text-secondary">
@@ -743,16 +743,16 @@
                 <p class="text-muted">Empowering individuals and businesses to support the cause.</p>
             </div>
             <div class="row g-4">
-                <div class="col-md-4 col-lg-3"><div class="gallery-item"><img src="images/retail1.jpg" loading="lazy" alt="Retail Fundraising" class="gallery-img"></div></div>
-                <div class="col-md-4 col-lg-3"><div class="gallery-item"><img src="images/retail2.jpg" loading="lazy" alt="Retail Fundraising" class="gallery-img"></div></div>
-                <div class="col-md-4 col-lg-3"><div class="gallery-item"><img src="images/retail3.jpg" loading="lazy" alt="Retail Fundraising" class="gallery-img"></div></div>
-                <div class="col-md-4 col-lg-3"><div class="gallery-item"><img src="images/retail4.jpg" loading="lazy" alt="Retail Fundraising" class="gallery-img"></div></div>
-                <div class="col-md-4 col-lg-3"><div class="gallery-item"><img src="images/retail5.jpg" loading="lazy" alt="Retail Fundraising" class="gallery-img"></div></div>
-                <div class="col-md-4 col-lg-3"><div class="gallery-item"><img src="images/retail6.jpg" loading="lazy" alt="Retail Fundraising" class="gallery-img"></div></div>
-                <div class="col-md-4 col-lg-3"><div class="gallery-item"><img src="images/retail7.jpg" loading="lazy" alt="Retail Fundraising" class="gallery-img"></div></div>
-                <div class="col-md-4 col-lg-3"><div class="gallery-item"><img src="images/retail8.jpg" loading="lazy" alt="Retail Fundraising" class="gallery-img"></div></div>
-                <div class="col-md-4 col-lg-3"><div class="gallery-item"><img src="images/retail9.jpg" loading="lazy" alt="Retail Fundraising" class="gallery-img"></div></div>
-                <div class="col-md-4 col-lg-3"><div class="gallery-item"><img src="images/retail10.jpg" loading="lazy" alt="Retail Fundraising" class="gallery-img"></div></div>
+                <div class="col-md-4 col-lg-3"><div class="gallery-item"><img src="images/retail1.jpg" loading="lazy" alt="Retail" class="gallery-img"></div></div>
+                <div class="col-md-4 col-lg-3"><div class="gallery-item"><img src="images/retail2.jpg" loading="lazy" alt="Retail" class="gallery-img"></div></div>
+                <div class="col-md-4 col-lg-3"><div class="gallery-item"><img src="images/retail3.jpg" loading="lazy" alt="Retail" class="gallery-img"></div></div>
+                <div class="col-md-4 col-lg-3"><div class="gallery-item"><img src="images/retail4.jpg" loading="lazy" alt="Retail" class="gallery-img"></div></div>
+                <div class="col-md-4 col-lg-3"><div class="gallery-item"><img src="images/retail5.jpg" loading="lazy" alt="Retail" class="gallery-img"></div></div>
+                <div class="col-md-4 col-lg-3"><div class="gallery-item"><img src="images/retail6.jpg" loading="lazy" alt="Retail" class="gallery-img"></div></div>
+                <div class="col-md-4 col-lg-3"><div class="gallery-item"><img src="images/retail7.jpg" loading="lazy" alt="Retail" class="gallery-img"></div></div>
+                <div class="col-md-4 col-lg-3"><div class="gallery-item"><img src="images/retail8.jpg" loading="lazy" alt="Retail" class="gallery-img"></div></div>
+                <div class="col-md-4 col-lg-3"><div class="gallery-item"><img src="images/retail9.jpg" loading="lazy" alt="Retail" class="gallery-img"></div></div>
+                <div class="col-md-4 col-lg-3"><div class="gallery-item"><img src="images/retail10.jpg" loading="lazy" alt="Retail" class="gallery-img"></div></div>
             </div>
         </div>
     </section>
@@ -775,14 +775,60 @@
                 </div>
             </div>
 
-            <div class="row g-4" id="event-gallery-container">
-                <script>
-                    let eventGalleryHTML = '';
-                    for(let i=1; i<=60; i++) {
-                        eventGalleryHTML += '<div class="col-md-4 col-lg-3"><div class="gallery-item"><img src="images/event' + i + '.jpg" loading="lazy" alt="Event Photo ' + i + '" class="gallery-img"></div></div>';
-                    }
-                    document.write(eventGalleryHTML);
-                </script>
+            <div class="row g-4">
+                <div class="col-md-4 col-lg-3"><div class="gallery-item"><img src="images/event1.jpg" loading="lazy" alt="Event" class="gallery-img"></div></div>
+                <div class="col-md-4 col-lg-3"><div class="gallery-item"><img src="images/event2.jpg" loading="lazy" alt="Event" class="gallery-img"></div></div>
+                <div class="col-md-4 col-lg-3"><div class="gallery-item"><img src="images/event3.jpg" loading="lazy" alt="Event" class="gallery-img"></div></div>
+                <div class="col-md-4 col-lg-3"><div class="gallery-item"><img src="images/event4.jpg" loading="lazy" alt="Event" class="gallery-img"></div></div>
+                <div class="col-md-4 col-lg-3"><div class="gallery-item"><img src="images/event5.jpg" loading="lazy" alt="Event" class="gallery-img"></div></div>
+                <div class="col-md-4 col-lg-3"><div class="gallery-item"><img src="images/event6.jpg" loading="lazy" alt="Event" class="gallery-img"></div></div>
+                <div class="col-md-4 col-lg-3"><div class="gallery-item"><img src="images/event7.jpg" loading="lazy" alt="Event" class="gallery-img"></div></div>
+                <div class="col-md-4 col-lg-3"><div class="gallery-item"><img src="images/event8.jpg" loading="lazy" alt="Event" class="gallery-img"></div></div>
+                <div class="col-md-4 col-lg-3"><div class="gallery-item"><img src="images/event9.jpg" loading="lazy" alt="Event" class="gallery-img"></div></div>
+                <div class="col-md-4 col-lg-3"><div class="gallery-item"><img src="images/event10.jpg" loading="lazy" alt="Event" class="gallery-img"></div></div>
+                <div class="col-md-4 col-lg-3"><div class="gallery-item"><img src="images/event11.jpg" loading="lazy" alt="Event" class="gallery-img"></div></div>
+                <div class="col-md-4 col-lg-3"><div class="gallery-item"><img src="images/event12.jpg" loading="lazy" alt="Event" class="gallery-img"></div></div>
+                <div class="col-md-4 col-lg-3"><div class="gallery-item"><img src="images/event13.jpg" loading="lazy" alt="Event" class="gallery-img"></div></div>
+                <div class="col-md-4 col-lg-3"><div class="gallery-item"><img src="images/event14.jpg" loading="lazy" alt="Event" class="gallery-img"></div></div>
+                <div class="col-md-4 col-lg-3"><div class="gallery-item"><img src="images/event15.jpg" loading="lazy" alt="Event" class="gallery-img"></div></div>
+                <div class="col-md-4 col-lg-3"><div class="gallery-item"><img src="images/event16.jpg" loading="lazy" alt="Event" class="gallery-img"></div></div>
+                <div class="col-md-4 col-lg-3"><div class="gallery-item"><img src="images/event17.jpg" loading="lazy" alt="Event" class="gallery-img"></div></div>
+                <div class="col-md-4 col-lg-3"><div class="gallery-item"><img src="images/event18.jpg" loading="lazy" alt="Event" class="gallery-img"></div></div>
+                <div class="col-md-4 col-lg-3"><div class="gallery-item"><img src="images/event19.jpg" loading="lazy" alt="Event" class="gallery-img"></div></div>
+                <div class="col-md-4 col-lg-3"><div class="gallery-item"><img src="images/event20.jpg" loading="lazy" alt="Event" class="gallery-img"></div></div>
+                <div class="col-md-4 col-lg-3"><div class="gallery-item"><img src="images/event21.jpg" loading="lazy" alt="Event" class="gallery-img"></div></div>
+                <div class="col-md-4 col-lg-3"><div class="gallery-item"><img src="images/event22.jpg" loading="lazy" alt="Event" class="gallery-img"></div></div>
+                <div class="col-md-4 col-lg-3"><div class="gallery-item"><img src="images/event23.jpg" loading="lazy" alt="Event" class="gallery-img"></div></div>
+                <div class="col-md-4 col-lg-3"><div class="gallery-item"><img src="images/event24.jpg" loading="lazy" alt="Event" class="gallery-img"></div></div>
+                <div class="col-md-4 col-lg-3"><div class="gallery-item"><img src="images/event25.jpg" loading="lazy" alt="Event" class="gallery-img"></div></div>
+                <div class="col-md-4 col-lg-3"><div class="gallery-item"><img src="images/event26.jpg" loading="lazy" alt="Event" class="gallery-img"></div></div>
+                <div class="col-md-4 col-lg-3"><div class="gallery-item"><img src="images/event27.jpg" loading="lazy" alt="Event" class="gallery-img"></div></div>
+                <div class="col-md-4 col-lg-3"><div class="gallery-item"><img src="images/event28.jpg" loading="lazy" alt="Event" class="gallery-img"></div></div>
+                <div class="col-md-4 col-lg-3"><div class="gallery-item"><img src="images/event29.jpg" loading="lazy" alt="Event" class="gallery-img"></div></div>
+                <div class="col-md-4 col-lg-3"><div class="gallery-item"><img src="images/event30.jpg" loading="lazy" alt="Event" class="gallery-img"></div></div>
+                <div class="col-md-4 col-lg-3"><div class="gallery-item"><img src="images/event31.jpg" loading="lazy" alt="Event" class="gallery-img"></div></div>
+                <div class="col-md-4 col-lg-3"><div class="gallery-item"><img src="images/event32.jpg" loading="lazy" alt="Event" class="gallery-img"></div></div>
+                <div class="col-md-4 col-lg-3"><div class="gallery-item"><img src="images/event33.jpg" loading="lazy" alt="Event" class="gallery-img"></div></div>
+                <div class="col-md-4 col-lg-3"><div class="gallery-item"><img src="images/event34.jpg" loading="lazy" alt="Event" class="gallery-img"></div></div>
+                <div class="col-md-4 col-lg-3"><div class="gallery-item"><img src="images/event35.jpg" loading="lazy" alt="Event" class="gallery-img"></div></div>
+                <div class="col-md-4 col-lg-3"><div class="gallery-item"><img src="images/event36.jpg" loading="lazy" alt="Event" class="gallery-img"></div></div>
+                <div class="col-md-4 col-lg-3"><div class="gallery-item"><img src="images/event37.jpg" loading="lazy" alt="Event" class="gallery-img"></div></div>
+                <div class="col-md-4 col-lg-3"><div class="gallery-item"><img src="images/event38.jpg" loading="lazy" alt="Event" class="gallery-img"></div></div>
+                <div class="col-md-4 col-lg-3"><div class="gallery-item"><img src="images/event39.jpg" loading="lazy" alt="Event" class="gallery-img"></div></div>
+                <div class="col-md-4 col-lg-3"><div class="gallery-item"><img src="images/event40.jpg" loading="lazy" alt="Event" class="gallery-img"></div></div>
+                <div class="col-md-4 col-lg-3"><div class="gallery-item"><img src="images/event41.jpg" loading="lazy" alt="Event" class="gallery-img"></div></div>
+                <div class="col-md-4 col-lg-3"><div class="gallery-item"><img src="images/event42.jpg" loading="lazy" alt="Event" class="gallery-img"></div></div>
+                <div class="col-md-4 col-lg-3"><div class="gallery-item"><img src="images/event43.jpg" loading="lazy" alt="Event" class="gallery-img"></div></div>
+                <div class="col-md-4 col-lg-3"><div class="gallery-item"><img src="images/event44.jpg" loading="lazy" alt="Event" class="gallery-img"></div></div>
+                <div class="col-md-4 col-lg-3"><div class="gallery-item"><img src="images/event45.jpg" loading="lazy" alt="Event" class="gallery-img"></div></div>
+                <div class="col-md-4 col-lg-3"><div class="gallery-item"><img src="images/event46.jpg" loading="lazy" alt="Event" class="gallery-img"></div></div>
+                <div class="col-md-4 col-lg-3"><div class="gallery-item"><img src="images/event47.jpg" loading="lazy" alt="Event" class="gallery-img"></div></div>
+                <div class="col-md-4 col-lg-3"><div class="gallery-item"><img src="images/event48.jpg" loading="lazy" alt="Event" class="gallery-img"></div></div>
+                <div class="col-md-4 col-lg-3"><div class="gallery-item"><img src="images/event49.jpg" loading="lazy" alt="Event" class="gallery-img"></div></div>
+                <div class="col-md-4 col-lg-3"><div class="gallery-item"><img src="images/event50.jpg" loading="lazy" alt="Event" class="gallery-img"></div></div>
+                <div class="col-md-4 col-lg-3"><div class="gallery-item"><img src="images/event51.jpg" loading="lazy" alt="Event" class="gallery-img"></div></div>
+                <div class="col-md-4 col-lg-3"><div class="gallery-item"><img src="images/event52.jpg" loading="lazy" alt="Event" class="gallery-img"></div></div>
+                <div class="col-md-4 col-lg-3"><div class="gallery-item"><img src="images/event53.jpg" loading="lazy" alt="Event" class="gallery-img"></div></div>
             </div>
         </div>
     </section>
